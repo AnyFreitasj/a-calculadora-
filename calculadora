@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Soma</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #resultado {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculadora de Soma</h2>
+    <input type="number" id="numero1" placeholder="Digite o primeiro número">
+    <input type="number" id="numero2" placeholder="Digite o segundo número">
+    <button onclick="calcular()">Somar</button>
+    <div id="resultado"></div>
+    <script>
+        function calcular() {
+            var num1 = parseFloat(document.getElementById('numero1').value);
+            var num2 = parseFloat(document.getElementById('numero2').value);
+            var resultado = num1 + num2;
+            document.getElementById('resultado').innerText = "Resultado: " + resultado;
+            
+            var imagem = document.createElement('img');
+            imagem.src = "https://www.meme-arsenal.com/memes/8b955bf4c55ba0ae6f324087fd02777b.jpg";
+            document.getElementById('resultado').appendChild(imagem);
+        }
+    </script>
+</body>
+</html>
